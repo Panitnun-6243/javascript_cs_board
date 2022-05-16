@@ -1,0 +1,19 @@
+{
+  "name": "tanny_board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.34",
+    "nodemon": "^2.0.16"
+  }
+}
