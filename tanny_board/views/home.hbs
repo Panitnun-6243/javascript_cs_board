@@ -3,7 +3,15 @@
 {{> metaHead }}
 
 <body>
-    <p class="font-sans text-2xl">Welcome to Tanny Board, Mr./Mrs. {{q}}</p>
+    <div class="flex flex-col h-screen justify-between overflow-y-auto">
+        {{> header }}
+
+        <div class="flex-1 p-2">
+            <p class="font-sans text-2xl">Welcome to Tanny Board, Mr./Mrs. {{q}}</p>
+        </div>
+
+        {{> footer}}
+    </div>
 </body>
 
 </html>
