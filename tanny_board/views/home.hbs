@@ -6,9 +6,47 @@
     <div class="flex flex-col h-screen justify-between overflow-y-auto">
         {{> header }}
 
-        <div class="flex-1 p-2">
-            <p class="font-sans text-2xl">Welcome to Tanny Board, Mr./Mrs. {{q}}</p>
+        <div class="flex-1 p-2 justify-items-center">
+            <div class="container mx-auto w-6/12"><p class="font-sans text-2xl font-bold m-2 text-orange-400">Welcome to CS Board</p>
+            <p class="font-sans text-lg m-2 text-orange-400">What do you want to tell your friends...? {{q}}</p>
+            
+            {{#each allPosts}}
+            {{!-- post card --}}
+            
+            <div class="flex bg-white shadow-lg rounded-lg md:mx-auto my-4 w-full p-3 ">
+                <!--horizantil margin is just for display-->
+                <a class="w-full" href="/p/{{this.id}}">
+                <div class="flex items-start px-4 py-6">
+                    
+                    <div class="">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold text-gray-900 -mt-1">{{this.from}}</h2>
+                            
+                        </div>
+                        <p class="text-gray-400 text-sm">Created at {{this.createdAtText}}</p>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            {{this.content}}
+                        </p>
+                        <div class="mt-4 flex items-center">
+                            
+                            <div class="flex mr-2 text-gray-700 text-sm mr-8">
+                                <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                                </svg>
+                                <span>{{this.commentsCount}}</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        
+        {{/each}}
         </div>
+</div>
+
 
         {{> footer}}
     </div>

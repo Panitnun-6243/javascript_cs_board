@@ -1,15 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-{{> metaHead }}
+{{> metaHead customTitle='Post ID: 1 | '}}
 
 <body>
     <div class="flex flex-col h-screen justify-between overflow-y-auto">
         {{> header }}
-        <div class="flex-1 p-2">
-            <p class="font-sans text-2xl">Your post id: {{postId}}</p>
-            <p class="font-sans text-2xl">Your post id: {{postId}}</p><p class="font-sans text-2xl">Your post id: {{postId}}</p>
+        <div class="flex-1 p-2 justify-items-center">
             
-        </div>
+            {{!-- post card --}}
+            
+            <div class="flex bg-orange-400 opacity-82 shadow-lg rounded-lg md:mx-auto my-4 max-w-md p-3 md:max-w-xl mb-8">
+                <!--horizantil margin is just for display-->
+                
+                <div class="flex items-start px-4 py-6">
+                    
+                    <div class="">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-white text-2xl font-semibold -mt-1 ">Tan</h2>
+                            
+                        </div>
+                        <p class=" text-base text-yellow-200 mt-2">Created at 20 April 2022</p>
+                        <p class="mt-2  text-lg text-white">
+                            My name is Tan
+                        </p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <hr style="width:40%;margin:auto;background-color:orange;">
+            {{!-- comments --}}
+        <p class="font-sans text-lg m-2 text-orange-500 text-center" >2 comments</p>
+        {{#each allComments}}
+            {{!-- post card --}}
+            
+            <div class="flex bg-white shadow-lg rounded-lg md:mx-auto my-4 max-w-md p-3">
+                <!--horizantil margin is just for display-->
+                
+                <div class="flex items-start px-4 py-6">
+                    
+                    <div class="">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold text-gray-900 -mt-1">{{this.from}}</h2>
+                            
+                        </div>
+                        <p class="text-gray-400 text-sm">Created at {{this.createdAtText}}</p>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            {{this.content}}
+                        </p>
+                       
+                    </div>
+                </div>
+                
+            </div>
+        
+        {{/each}}
+        <div class="mb-8"></div>
+        <hr style="width:40%;margin:auto;background-color:orange;">
+        <div class="container mx-auto w-5/12">
+        <textarea
+      class="mt-8
+      mx-auto
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded-md
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+      id="exampleFormControlTextarea1"
+      rows="3"
+      placeholder="Comment..."
+    ></textarea>
+    {{!-- from --}}
+    <textarea
+      class="mt-4
+      mx-auto
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded-md
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+      id="exampleFormControlTextarea1"
+      rows="1"
+      placeholder="From..."
+    ></textarea>
+    <button class="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mx-auto my-4">
+  Comment
+</button>
+       </div> 
+</div>
 
         {{> footer}}
     </div>

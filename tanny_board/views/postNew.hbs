@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-{{> metaHead }}
+{{> metaHead customTitle='New Post | '}}
 
 <body>
     <div class="flex flex-col h-screen justify-between overflow-y-auto">
         {{> header }}
         
-        <div class="flex-1 p-2">
-            <p class="font-sans text-2xl">Add new post</p>
+        <div class="flex-1 p-2 ustify-items-center">
+            <div class="container mx-auto w-5/12 mt-4">
+  <p class="font-sans text-xl text-start mb-3">Create new post</p>
+  <p class="font-sans text-base text-start">Tell something to your friends</p>
+  
+        <textarea
+      class="mt-8
+      mx-auto
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded-md
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+      id="exampleFormControlTextarea1"
+      rows="3"
+      placeholder="Content..."
+    ></textarea>
+    {{!-- from --}}
+    <textarea
+      class="mt-4
+      mx-auto
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded-md
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+      id="exampleFormControlTextarea1"
+      rows="1"
+      placeholder="From..."
+    ></textarea>
+    <button class="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mx-auto my-4">
+  Create
+</button>
+       
+</div>
+            
         </div>
 
         {{> footer}}
