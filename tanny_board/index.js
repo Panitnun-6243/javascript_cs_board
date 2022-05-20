@@ -7,13 +7,13 @@ hbs.registerPartials(__dirname + "/views/partials"); //เพื่อบอกh
 
 const allPosts = [{
     id: 1,
-    content: "My name is Tan",
+    content: "My name is Tan. I'm from Chiang Mai, nice to meet you everyone",
     from: "Tan",
     createdAtText: "20 April 2022",
     commentsCount: 2,
 }, {
     id: 2,
-    content: "My name is Jenny",
+    content: "You can call me Jenny, see yaa soon!",
     from: "Jenny",
     createdAtText: "20 April 2022",
     commentsCount: 1,
